@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C95509E4-8B31-4166-A2FE-C7D7FDB62DE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>osuStateReader</RootNamespace>
+    <AssemblyName>osuStateReader</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.3.3, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Core.1.1.3.3\lib\net452\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.3.3, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Shell.1.1.3.3\lib\net452\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OsuMemoryDataProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OsuMemoryDataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="ProcessMemoryDataFinder, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ProcessMemoryDataFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="websocket-sharp">
+      <HintPath>.\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+</Project>

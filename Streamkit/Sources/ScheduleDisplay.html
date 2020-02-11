@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OFCT stream schedule display</title>
+    <!--<script src="textFit.js"></script>-->
+</head>
+<body>
+<style>
+    body {
+        /*background-color: black;*/
+    }
+
+    .titleDiv > div{
+        float: left;
+    }
+
+    .Braket {
+        font-family: "Exo 2 ExtraLight", "나눔스퀘어라운드", sans-serif;
+        font-weight: 100;
+        letter-spacing: 30px;
+        font-size: 70px;
+        text-align: center;
+        font-variant-ligatures: none;
+        color: #ffffff;
+        text-shadow: 0px 0px 7px #000000;
+        margin: 5px;
+    }
+
+    .Schedule {
+        font-family: "Product Sans", "나눔스퀘어라운드", sans-serif;
+        letter-spacing: 2px;
+        font-size: 35px;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0px 0px 7px #000000;
+        margin: 5px;
+    }
+
+</style>
+<div id="Braket" class="Braket">Braket Text</div>
+<div id="Schedule" class="Schedule">Schedule Text</div>
+
+<script>
+
+    function readTextFile(file) {
+        var returnText = new String();
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4) {
+                if (rawFile.status === 200 || rawFile.status == 0) {
+                    var allText = rawFile.responseText;
+                    returnText = allText;
+                }
+            }
+        };
+        rawFile.send(null);
+        return returnText;
+    }
+
+    function update() {
+        document.getElementById("Braket").innerHTML = readTextFile("../braket.txt");
+        document.getElementById("Schedule").innerHTML = readTextFile("../schedule.txt");
+        //textFit(document.getElementById("timeleft")), {minFontSize: 10, maxFontSize: 300};
+    }
+
+    setInterval(update, 3000);
+</script>
+</body>
+</html>

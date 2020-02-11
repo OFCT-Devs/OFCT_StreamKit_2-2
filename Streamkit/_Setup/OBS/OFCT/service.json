@@ -1,0 +1,9 @@
+{
+    "settings": {
+        "bwtest": false,
+        "key": "live_249142269_SGf7I02D6FzQ09tS5yOCo3Xy02GTgv",
+        "server": "rtmp://live-sel.twitch.tv/app",
+        "service": "Twitch"
+    },
+    "type": "rtmp_common"
+}

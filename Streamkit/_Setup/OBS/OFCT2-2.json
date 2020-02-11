@@ -1,0 +1,4789 @@
+{
+    "AuxAudioDevice1": {
+        "balance": 0.5,
+        "deinterlace_field_order": 0,
+        "deinterlace_mode": 0,
+        "enabled": true,
+        "flags": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
+        },
+        "id": "wasapi_input_capture",
+        "mixers": 192,
+        "monitoring_type": 0,
+        "muted": true,
+        "name": "마이크/보조",
+        "prev_ver": 402653187,
+        "private_settings": {},
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "settings": {
+            "device_id": "default"
+        },
+        "sync": 0,
+        "volume": 1.0
+    },
+    "DesktopAudioDevice1": {
+        "balance": 0.5,
+        "deinterlace_field_order": 0,
+        "deinterlace_mode": 0,
+        "enabled": true,
+        "filters": [
+            {
+                "balance": 0.5,
+                "deinterlace_field_order": 0,
+                "deinterlace_mode": 0,
+                "enabled": false,
+                "flags": 0,
+                "hotkeys": {},
+                "id": "gain_filter",
+                "mixers": 255,
+                "monitoring_type": 0,
+                "muted": false,
+                "name": "증폭",
+                "prev_ver": 402653187,
+                "private_settings": {},
+                "push-to-mute": false,
+                "push-to-mute-delay": 0,
+                "push-to-talk": false,
+                "push-to-talk-delay": 0,
+                "settings": {
+                    "db": 15.0
+                },
+                "sync": 0,
+                "volume": 1.0
+            }
+        ],
+        "flags": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
+        },
+        "id": "wasapi_output_capture",
+        "mixers": 255,
+        "monitoring_type": 0,
+        "muted": false,
+        "name": "데스크탑 오디오",
+        "prev_ver": 402653187,
+        "private_settings": {},
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "settings": {
+            "device_id": "default",
+            "use_device_timing": false
+        },
+        "sync": 0,
+        "volume": 1.0
+    },
+    "current_program_scene": "OFCT_Prepare",
+    "current_scene": "OFCT_Prepare",
+    "current_transition": "OFCT 2-2 Transition",
+    "groups": [
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.hide_scene_item.voice": [],
+                "libobs.show_scene_item.voice": []
+            },
+            "id": "group",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Voice_Ingame",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": true,
+                "cx": 480,
+                "cy": 170,
+                "id_counter": 0,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 170,
+                        "group_item_backup": false,
+                        "id": 38,
+                        "locked": true,
+                        "name": "voice",
+                        "pos": {
+                            "x": 240.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 170,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 37,
+                        "locked": true,
+                        "name": "voice",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.hide_scene_item.Toonation": [],
+                "libobs.hide_scene_item.Twitch_Chat": [],
+                "libobs.show_scene_item.Toonation": [],
+                "libobs.show_scene_item.Twitch_Chat": []
+            },
+            "id": "group",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Twitch",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": true,
+                "cx": 480,
+                "cy": 360,
+                "id_counter": 0,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 31,
+                        "locked": true,
+                        "name": "Twitch_Chat",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 45,
+                        "locked": true,
+                        "name": "Toonation",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.hide_scene_item.Manager_Stars": [],
+                "libobs.hide_scene_item.NowPlaying_Ingame": [],
+                "libobs.show_scene_item.Manager_Stars": [],
+                "libobs.show_scene_item.NowPlaying_Ingame": []
+            },
+            "id": "group",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Top",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": true,
+                "cx": 1920,
+                "cy": 40,
+                "id_counter": 0,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 808,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 88,
+                        "group_item_backup": false,
+                        "id": 35,
+                        "locked": true,
+                        "name": "Manager_Stars",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 13,
+                        "locked": true,
+                        "name": "NowPlaying_Ingame",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.hide_scene_item.BlueTeamName": [],
+                "libobs.hide_scene_item.RedTeamName": [],
+                "libobs.show_scene_item.BlueTeamName": [],
+                "libobs.show_scene_item.RedTeamName": []
+            },
+            "id": "group",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "TeamName",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": true,
+                "cx": 1679,
+                "cy": 72,
+                "id_counter": 0,
+                "items": [
+                    {
+                        "align": 2,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 30,
+                        "locked": true,
+                        "name": "BlueTeamName",
+                        "pos": {
+                            "x": 1679.0,
+                            "y": 36.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 1,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 29,
+                        "locked": true,
+                        "name": "RedTeamName",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 36.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.hide_scene_item.ChatBGdim": [],
+                "libobs.hide_scene_item.IngameDisplayer": [],
+                "libobs.hide_scene_item.Manager_Chat": [],
+                "libobs.show_scene_item.ChatBGdim": [],
+                "libobs.show_scene_item.IngameDisplayer": [],
+                "libobs.show_scene_item.Manager_Chat": []
+            },
+            "id": "group",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Bottom",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": true,
+                "cx": 960,
+                "cy": 170,
+                "id_counter": 0,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 40,
+                        "locked": true,
+                        "name": "ChatBGdim",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 200,
+                        "crop_left": 320,
+                        "crop_right": 320,
+                        "crop_top": 615,
+                        "group_item_backup": false,
+                        "id": 12,
+                        "locked": true,
+                        "name": "Manager_Chat",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 52,
+                        "locked": true,
+                        "name": "IngameDisplayer",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.hide_scene_item.스트리머": [],
+                "libobs.hide_scene_item.프사": [],
+                "libobs.show_scene_item.스트리머": [],
+                "libobs.show_scene_item.프사": []
+            },
+            "id": "group",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Streamer",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": true,
+                "cx": 283,
+                "cy": 180,
+                "id_counter": 0,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 26,
+                        "locked": true,
+                        "name": "스트리머",
+                        "pos": {
+                            "x": 91.0,
+                            "y": 13.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 1655,
+                        "crop_left": 302,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 29,
+                        "locked": true,
+                        "name": "프사",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.069088034331798553,
+                            "y": 0.06897880882024765
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.hide_scene_item.Dim_Display": [],
+                "libobs.hide_scene_item.Voice_Display": [],
+                "libobs.show_scene_item.Dim_Display": [],
+                "libobs.show_scene_item.Voice_Display": []
+            },
+            "id": "group",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Voice_Group_Display",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": true,
+                "cx": 417,
+                "cy": 300,
+                "id_counter": 0,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 22,
+                        "locked": true,
+                        "name": "Dim_Display",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 14,
+                        "locked": true,
+                        "name": "Voice_Display",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        }
+    ],
+    "modules": {
+        "auto-scene-switcher": {
+            "active": false,
+            "interval": 300,
+            "non_matching_scene": "",
+            "switch_if_not_matching": false,
+            "switches": []
+        },
+        "captions": {
+            "enabled": false,
+            "lang_id": 1042,
+            "provider": "mssapi",
+            "source": ""
+        },
+        "output-timer": {
+            "autoStartRecordTimer": false,
+            "autoStartStreamTimer": false,
+            "pauseRecordTimer": false,
+            "recordTimerHours": 0,
+            "recordTimerMinutes": 0,
+            "recordTimerSeconds": 0,
+            "streamTimerHours": 0,
+            "streamTimerMinutes": 0,
+            "streamTimerSeconds": 0
+        },
+        "scripts-tool": []
+    },
+    "name": "OFCT2-2",
+    "preview_locked": false,
+    "quick_transitions": [],
+    "saved_projectors": [],
+    "scaling_enabled": false,
+    "scaling_level": 0,
+    "scaling_off_x": 0.0,
+    "scaling_off_y": 0.0,
+    "scene_order": [
+        {
+            "name": "OFCT_Prepare"
+        },
+        {
+            "name": "OFCT_Prepare_teamview"
+        },
+        {
+            "name": "OFCT_InGame"
+        },
+        {
+            "name": "OFCT_mapPick"
+        },
+        {
+            "name": "OFCT_osu!/Screen"
+        },
+        {
+            "name": "OFCT_End"
+        }
+    ],
+    "sources": [
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "NowPlaying_Ingame",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "align": "center",
+                "extents": true,
+                "extents_cx": 1920,
+                "extents_cy": 40,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/SongDiffTitle.txt",
+                "font": {
+                    "face": "Product Sans",
+                    "flags": 0,
+                    "size": 36,
+                    "style": "Regular"
+                },
+                "read_from_file": true,
+                "valign": "center"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Background": [],
+                "libobs.hide_scene_item.Bottom": [],
+                "libobs.hide_scene_item.Clients": [],
+                "libobs.hide_scene_item.IngameOverlay": [],
+                "libobs.hide_scene_item.IngameTitle": [],
+                "libobs.hide_scene_item.Logoshow": [],
+                "libobs.hide_scene_item.TeamName": [],
+                "libobs.hide_scene_item.Top": [],
+                "libobs.hide_scene_item.Twitch": [],
+                "libobs.hide_scene_item.Voice_Ingame": [],
+                "libobs.show_scene_item.Background": [],
+                "libobs.show_scene_item.Bottom": [],
+                "libobs.show_scene_item.Clients": [],
+                "libobs.show_scene_item.IngameOverlay": [],
+                "libobs.show_scene_item.IngameTitle": [],
+                "libobs.show_scene_item.Logoshow": [],
+                "libobs.show_scene_item.TeamName": [],
+                "libobs.show_scene_item.Top": [],
+                "libobs.show_scene_item.Twitch": [],
+                "libobs.show_scene_item.Voice_Ingame": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "OFCT_InGame",
+            "prev_ver": 402653187,
+            "private_settings": {
+                "transition": ""
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 13,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": true,
+                        "name": "Background",
+                        "pos": {
+                            "x": 335.3961181640625,
+                            "y": -767.58056640625
+                        },
+                        "private_settings": {},
+                        "rot": 25.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": true,
+                        "name": "Logoshow",
+                        "pos": {
+                            "x": 1440.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": true,
+                        "name": "IngameOverlay",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 40,
+                        "locked": true,
+                        "name": "ChatBGdim",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 200,
+                        "crop_left": 320,
+                        "crop_right": 320,
+                        "crop_top": 615,
+                        "group_item_backup": true,
+                        "id": 12,
+                        "locked": true,
+                        "name": "Manager_Chat",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 52,
+                        "locked": true,
+                        "name": "IngameDisplayer",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": true,
+                        "name": "Bottom",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 808,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 88,
+                        "group_item_backup": true,
+                        "id": 35,
+                        "locked": true,
+                        "name": "Manager_Stars",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 130.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 13,
+                        "locked": true,
+                        "name": "NowPlaying_Ingame",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 130.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": true,
+                        "name": "Top",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 130.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 170,
+                        "group_item_backup": true,
+                        "id": 38,
+                        "locked": true,
+                        "name": "voice",
+                        "pos": {
+                            "x": 240.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 170,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 37,
+                        "locked": true,
+                        "name": "voice",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": true,
+                        "name": "Voice_Ingame",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 585,
+                        "crop_left": 0,
+                        "crop_right": 640,
+                        "crop_top": 135,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": true,
+                        "name": "Clients",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 190.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 2,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 30,
+                        "locked": true,
+                        "name": "BlueTeamName",
+                        "pos": {
+                            "x": 1806.0,
+                            "y": 70.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 1,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 29,
+                        "locked": true,
+                        "name": "RedTeamName",
+                        "pos": {
+                            "x": 127.0,
+                            "y": 70.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": true,
+                        "name": "TeamName",
+                        "pos": {
+                            "x": 127.0,
+                            "y": 34.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 31,
+                        "locked": true,
+                        "name": "Twitch_Chat",
+                        "pos": {
+                            "x": 720.0,
+                            "y": 190.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 45,
+                        "locked": true,
+                        "name": "Toonation",
+                        "pos": {
+                            "x": 720.0,
+                            "y": 190.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 9,
+                        "locked": true,
+                        "name": "Twitch",
+                        "pos": {
+                            "x": 720.0,
+                            "y": 190.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 0,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 10,
+                        "locked": true,
+                        "name": "IngameTitle",
+                        "pos": {
+                            "x": 960.0,
+                            "y": 70.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "스트리머",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "font": {
+                    "face": "Noto Sans CJK KR Light",
+                    "flags": 0,
+                    "size": 72,
+                    "style": "Light"
+                },
+                "text": "스트리머\n       공리"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 보정",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "opacity": 30
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Dim_Prepare",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4278190080,
+                "height": 500,
+                "width": 1920
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "voice",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 340,
+                "url": "https://streamkit.discordapp.com/overlay/voice/569530403829055489/601774998826385409?icon=true&online=true&logo=white&text_color=%23ffffff&text_size=20&text_outline_color=%23000000&text_outline_size=0&text_shadow_color=%23000000&text_shadow_size=0&bg_color=%23000000&bg_opacity=1&bg_shadow_color=%23000000&bg_shadow_size=10&invite_code=&limit_speaking=false&small_avatars=false&hide_names=false&fade_chat=0",
+                "width": 240
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Maps_BG",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4281940281,
+                "height": 720,
+                "width": 1920
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": true,
+            "name": "Toonation",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "css": "body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }",
+                "height": 360,
+                "reroute_audio": true,
+                "url": "https://toon.at/widget/alertbox/c844aaacb424a297fdcafe17d7c2f46b",
+                "width": 480
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "mask_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "이미지 마스크/혼합",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "image_path": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/ChatLumaMask.png"
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 1,
+            "muted": false,
+            "name": "Twitch_Chat",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 360,
+                "url": "https://streamlabs.com/widgets/chat-box/v1/ACFEE98944E37489D31D",
+                "width": 480
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "BlueTeamName",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "align": "right",
+                "color": 4278190080,
+                "extents": false,
+                "extents_cx": 500,
+                "extents_cy": 80,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/BlueTeamName.txt",
+                "font": {
+                    "face": "Noto Sans CJK KR Bold",
+                    "flags": 1,
+                    "size": 72,
+                    "style": "Bold"
+                },
+                "outline": false,
+                "read_from_file": true,
+                "text": "Blue",
+                "valign": "center"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "RedTeamName",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4278190080,
+                "extents": false,
+                "extents_cx": 430,
+                "extents_cy": 80,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/RedTeamName.txt",
+                "font": {
+                    "face": "Noto Sans CJK KR Bold",
+                    "flags": 1,
+                    "size": 72,
+                    "style": "Bold"
+                },
+                "read_from_file": true,
+                "text": "Red",
+                "valign": "center"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "IngameOverlay",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/IngameOverlay.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "scroll_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "스크롤",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "cx": 2500,
+                        "cy": 2000,
+                        "limit_cx": true,
+                        "limit_cy": true,
+                        "speed_x": 20.0,
+                        "speed_y": 20.0
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Background",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/BG.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 63,
+            "monitoring_type": 1,
+            "muted": false,
+            "name": "PlayerInfo",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "fps": 1,
+                "height": 500,
+                "is_local_file": true,
+                "local_file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/TeamInfo.html",
+                "restart_when_active": true,
+                "shutdown": true,
+                "width": 1920
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 63,
+            "monitoring_type": 1,
+            "muted": false,
+            "name": "Schedule",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 150,
+                "is_local_file": true,
+                "local_file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/ScheduleDisplay.html",
+                "restart_when_active": true,
+                "shutdown": true,
+                "width": 1800
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Background": [],
+                "libobs.hide_scene_item.Circles": [],
+                "libobs.hide_scene_item.Manager_Nowplaying": [],
+                "libobs.hide_scene_item.OFCTlogo": [],
+                "libobs.hide_scene_item.PlayerInfo": [],
+                "libobs.hide_scene_item.Schedule": [],
+                "libobs.hide_scene_item.Voice": [],
+                "libobs.show_scene_item.Background": [],
+                "libobs.show_scene_item.Circles": [],
+                "libobs.show_scene_item.Manager_Nowplaying": [],
+                "libobs.show_scene_item.OFCTlogo": [],
+                "libobs.show_scene_item.PlayerInfo": [],
+                "libobs.show_scene_item.Schedule": [],
+                "libobs.show_scene_item.Voice": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "OFCT_Prepare_teamview",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 27,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 23,
+                        "locked": true,
+                        "name": "Background",
+                        "pos": {
+                            "x": 335.3961181640625,
+                            "y": -767.58056640625
+                        },
+                        "private_settings": {},
+                        "rot": 25.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": true,
+                        "name": "Schedule",
+                        "pos": {
+                            "x": 60.0,
+                            "y": 900.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 24,
+                        "locked": true,
+                        "name": "Circles",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 240.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 9,
+                        "locked": true,
+                        "name": "PlayerInfo",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 340.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 21,
+                        "locked": true,
+                        "name": "Voice",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 740.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 983,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 139,
+                        "group_item_backup": false,
+                        "id": 27,
+                        "locked": true,
+                        "name": "Manager_Nowplaying",
+                        "pos": {
+                            "x": -211.5,
+                            "y": 240.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.4643750190734863,
+                            "y": 1.4642857313156128
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 25,
+                        "locked": true,
+                        "name": "OFCTlogo",
+                        "pos": {
+                            "x": 764.0,
+                            "y": 50.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.40329217910766602,
+                            "y": 0.40326976776123047
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "NowPlaying_Prepare",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "align": "center",
+                "bk_opacity": 0,
+                "color": 4294967295,
+                "extents": false,
+                "extents_cx": 2700,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/SongTitle.txt",
+                "font": {
+                    "face": "Product Sans",
+                    "flags": 0,
+                    "size": 72,
+                    "style": "Regular"
+                },
+                "get_playing_song": false,
+                "outline": false,
+                "read_from_file": true,
+                "read_from_vnr": false,
+                "text": "Now Playing",
+                "valign": "center"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Background": [],
+                "libobs.hide_scene_item.End": [],
+                "libobs.hide_scene_item.NowPlaying_End": [],
+                "libobs.hide_scene_item.Pulse": [],
+                "libobs.show_scene_item.Background": [],
+                "libobs.show_scene_item.End": [],
+                "libobs.show_scene_item.NowPlaying_End": [],
+                "libobs.show_scene_item.Pulse": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "OFCT_End",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 23,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 19,
+                        "locked": true,
+                        "name": "Background",
+                        "pos": {
+                            "x": 335.3961181640625,
+                            "y": -767.58056640625
+                        },
+                        "private_settings": {},
+                        "rot": 25.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 0,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 21,
+                        "locked": true,
+                        "name": "Pulse",
+                        "pos": {
+                            "x": 960.0,
+                            "y": 500.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.89999997615814209,
+                            "y": 0.89999997615814209
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 11,
+                        "locked": true,
+                        "name": "End",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 23,
+                        "locked": true,
+                        "name": "NowPlaying_End",
+                        "pos": {
+                            "x": 60.0,
+                            "y": 980.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "window_capture",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "osu!@720p",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "cursor": false,
+                "priority": 1,
+                "window": "osu!cuttingedge b20200118:WindowsForms10.Window.2b.app.0.bb8560_r9_ad1:osu!.exe"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Title",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4294967295,
+                "extents": true,
+                "extents_cx": 600,
+                "extents_cy": 300,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/StreamTitle.txt",
+                "font": {
+                    "face": "Noto Sans CJK KR Bold",
+                    "flags": 1,
+                    "size": 72,
+                    "style": "Bold"
+                },
+                "read_from_file": true,
+                "text": "OFCT Streamkit 20191107",
+                "valign": "bottom"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_key_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 키",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "key_color": 4278190080,
+                        "key_color_type": "custom"
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 63,
+            "monitoring_type": 1,
+            "muted": false,
+            "name": "Chat_Display",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 800,
+                "restart_when_active": false,
+                "url": "https://streamlabs.com/widgets/chat-box/v1/ACFEE98944E37489D31D",
+                "width": 337
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "monitor_capture",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Monitor#1@16:9",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "monitor": 0
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 63,
+            "monitoring_type": 1,
+            "muted": false,
+            "name": "Voice_Display",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 300,
+                "restart_when_active": true,
+                "shutdown": true,
+                "url": "https://streamkit.discordapp.com/overlay/voice/569530403829055489/601774998826385409?icon=true&online=true&logo=white&text_color=%23ffffff&text_size=25&text_outline_color=%23000000&text_outline_size=0&text_shadow_color=%23000000&text_shadow_size=0&bg_color=%23000000&bg_opacity=1&bg_shadow_color=%23000000&bg_shadow_size=10&invite_code=&limit_speaking=false&small_avatars=false&hide_names=false&fade_chat=0",
+                "width": 417
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.BG_Display": [],
+                "libobs.hide_scene_item.Background": [],
+                "libobs.hide_scene_item.Chat_Display": [],
+                "libobs.hide_scene_item.Monitor#1@16:9": [],
+                "libobs.hide_scene_item.NowPlaying_Display": [],
+                "libobs.hide_scene_item.Title_Display": [],
+                "libobs.hide_scene_item.Voice_Group_Display": [],
+                "libobs.hide_scene_item.osu!@720p": [],
+                "libobs.show_scene_item.BG_Display": [],
+                "libobs.show_scene_item.Background": [],
+                "libobs.show_scene_item.Chat_Display": [],
+                "libobs.show_scene_item.Monitor#1@16:9": [],
+                "libobs.show_scene_item.NowPlaying_Display": [],
+                "libobs.show_scene_item.Title_Display": [],
+                "libobs.show_scene_item.Voice_Group_Display": [],
+                "libobs.show_scene_item.osu!@720p": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "OFCT_osu!/Screen",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 23,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 17,
+                        "locked": true,
+                        "name": "Background",
+                        "pos": {
+                            "x": 324.3961181640625,
+                            "y": -774.58056640625
+                        },
+                        "private_settings": {},
+                        "rot": 25.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 10,
+                        "locked": true,
+                        "name": "BG_Display",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": true,
+                        "name": "Chat_Display",
+                        "pos": {
+                            "x": 1502.219970703125,
+                            "y": 185.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 22,
+                        "locked": true,
+                        "name": "Dim_Display",
+                        "pos": {
+                            "x": 1503.0,
+                            "y": 185.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 14,
+                        "locked": true,
+                        "name": "Voice_Display",
+                        "pos": {
+                            "x": 1503.0,
+                            "y": 185.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 23,
+                        "locked": true,
+                        "name": "Voice_Group_Display",
+                        "pos": {
+                            "x": 1503.0,
+                            "y": 185.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 120,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": true,
+                        "name": "Monitor#1@16:9",
+                        "pos": {
+                            "x": 80.0,
+                            "y": 185.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.74073958396911621,
+                            "y": 0.74062502384185791
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": true,
+                        "name": "osu!@720p",
+                        "pos": {
+                            "x": 80.0,
+                            "y": 185.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.1111093759536743,
+                            "y": 1.1111111640930176
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 20,
+                        "locked": true,
+                        "name": "NowPlaying_Display",
+                        "pos": {
+                            "x": 80.0,
+                            "y": 991.875
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 18,
+                        "locked": true,
+                        "name": "Title_Display",
+                        "pos": {
+                            "x": 402.38128662109375,
+                            "y": 62.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Background": [],
+                "libobs.hide_scene_item.Bottom": [],
+                "libobs.hide_scene_item.IngameOverlay": [],
+                "libobs.hide_scene_item.IngameTitle": [],
+                "libobs.hide_scene_item.Logoshow": [],
+                "libobs.hide_scene_item.Maps_BG": [],
+                "libobs.hide_scene_item.TeamName": [],
+                "libobs.hide_scene_item.Top": [],
+                "libobs.hide_scene_item.Voice_Ingame": [],
+                "libobs.hide_scene_item.mapPick": [],
+                "libobs.show_scene_item.Background": [],
+                "libobs.show_scene_item.Bottom": [],
+                "libobs.show_scene_item.IngameOverlay": [],
+                "libobs.show_scene_item.IngameTitle": [],
+                "libobs.show_scene_item.Logoshow": [],
+                "libobs.show_scene_item.Maps_BG": [],
+                "libobs.show_scene_item.TeamName": [],
+                "libobs.show_scene_item.Top": [],
+                "libobs.show_scene_item.Voice_Ingame": [],
+                "libobs.show_scene_item.mapPick": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "OFCT_mapPick",
+            "prev_ver": 402653187,
+            "private_settings": {
+                "transition": ""
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 41,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 28,
+                        "locked": true,
+                        "name": "Background",
+                        "pos": {
+                            "x": 335.3961181640625,
+                            "y": -768.58056640625
+                        },
+                        "private_settings": {},
+                        "rot": 25.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 0,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 30,
+                        "locked": true,
+                        "name": "IngameOverlay",
+                        "pos": {
+                            "x": 960.0,
+                            "y": 540.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 41,
+                        "locked": true,
+                        "name": "Logoshow",
+                        "pos": {
+                            "x": 1440.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 34,
+                        "locked": true,
+                        "name": "Maps_BG",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 190.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 40,
+                        "locked": true,
+                        "name": "ChatBGdim",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 200,
+                        "crop_left": 320,
+                        "crop_right": 320,
+                        "crop_top": 615,
+                        "group_item_backup": true,
+                        "id": 12,
+                        "locked": true,
+                        "name": "Manager_Chat",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 52,
+                        "locked": true,
+                        "name": "IngameDisplayer",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 40,
+                        "locked": true,
+                        "name": "Bottom",
+                        "pos": {
+                            "x": 480.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {
+                            "collapsed": false
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 12,
+                        "locked": true,
+                        "name": "mapPick",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 190.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 170,
+                        "group_item_backup": true,
+                        "id": 38,
+                        "locked": true,
+                        "name": "voice",
+                        "pos": {
+                            "x": 270.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 170,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 37,
+                        "locked": true,
+                        "name": "voice",
+                        "pos": {
+                            "x": 30.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 39,
+                        "locked": true,
+                        "name": "Voice_Ingame",
+                        "pos": {
+                            "x": 30.0,
+                            "y": 910.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 808,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 88,
+                        "group_item_backup": true,
+                        "id": 35,
+                        "locked": true,
+                        "name": "Manager_Stars",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 130.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.5,
+                            "y": 1.5
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 13,
+                        "locked": true,
+                        "name": "NowPlaying_Ingame",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 130.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 33,
+                        "locked": true,
+                        "name": "Top",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 130.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 2,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 30,
+                        "locked": true,
+                        "name": "BlueTeamName",
+                        "pos": {
+                            "x": 1806.0,
+                            "y": 70.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 1,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 29,
+                        "locked": true,
+                        "name": "RedTeamName",
+                        "pos": {
+                            "x": 127.0,
+                            "y": 70.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 32,
+                        "locked": true,
+                        "name": "TeamName",
+                        "pos": {
+                            "x": 127.0,
+                            "y": 34.0
+                        },
+                        "private_settings": {
+                            "collapsed": true
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 0,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 31,
+                        "locked": true,
+                        "name": "IngameTitle",
+                        "pos": {
+                            "x": 960.0,
+                            "y": 70.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 63,
+            "monitoring_type": 1,
+            "muted": false,
+            "name": "mapPick",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "fps": 60,
+                "fps_custom": false,
+                "height": 890,
+                "is_local_file": true,
+                "local_file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/mapPick.html",
+                "restart_when_active": true,
+                "shutdown": true,
+                "width": 1920
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "BG_Display",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/DisplayBG.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 63,
+            "monitoring_type": 1,
+            "muted": false,
+            "name": "Voice",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "fps_custom": false,
+                "height": 340,
+                "restart_when_active": false,
+                "shutdown": false,
+                "url": "https://streamkit.discordapp.com/overlay/voice/569530403829055489/601774998826385409?icon=true&online=true&logo=white&text_color=%23ffffff&text_size=15&text_outline_color=%23000000&text_outline_size=0&text_shadow_color=%23000000&text_shadow_size=0&bg_color=%231e2124&bg_opacity=0.4&bg_shadow_color=%23000000&bg_shadow_size=25&invite_code=&limit_speaking=true&small_avatars=true&hide_names=false&fade_chat=0",
+                "width": 240
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Background": [],
+                "libobs.hide_scene_item.Dim_Prepare": [],
+                "libobs.hide_scene_item.NowPlaying_Prepare": [],
+                "libobs.hide_scene_item.PrepareOverlay": [],
+                "libobs.hide_scene_item.Pulse": [],
+                "libobs.hide_scene_item.Streamer": [],
+                "libobs.hide_scene_item.Title": [],
+                "libobs.show_scene_item.Background": [],
+                "libobs.show_scene_item.Dim_Prepare": [],
+                "libobs.show_scene_item.NowPlaying_Prepare": [],
+                "libobs.show_scene_item.PrepareOverlay": [],
+                "libobs.show_scene_item.Pulse": [],
+                "libobs.show_scene_item.Streamer": [],
+                "libobs.show_scene_item.Title": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "OFCT_Prepare",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 31,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 20,
+                        "locked": true,
+                        "name": "Background",
+                        "pos": {
+                            "x": 335.3961181640625,
+                            "y": -767.58056640625
+                        },
+                        "private_settings": {},
+                        "rot": 25.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 25,
+                        "locked": true,
+                        "name": "Dim_Prepare",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 290.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 0,
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 22,
+                        "locked": true,
+                        "name": "Pulse",
+                        "pos": {
+                            "x": 526.0,
+                            "y": 540.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.75333333015441895,
+                            "y": 0.75333333015441895
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 12,
+                        "locked": true,
+                        "name": "NowPlaying_Prepare",
+                        "pos": {
+                            "x": 932.0,
+                            "y": 567.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.63563829660415649,
+                            "y": 0.6388888955116272
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 15,
+                        "locked": true,
+                        "name": "Title",
+                        "pos": {
+                            "x": 926.0,
+                            "y": 87.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.4171270132064819,
+                            "y": 1.4166666269302368
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": true,
+                        "name": "PrepareOverlay",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 26,
+                        "locked": true,
+                        "name": "스트리머",
+                        "pos": {
+                            "x": 1651.0,
+                            "y": 626.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 1655,
+                        "crop_left": 302,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": true,
+                        "id": 29,
+                        "locked": true,
+                        "name": "프사",
+                        "pos": {
+                            "x": 1560.0,
+                            "y": 613.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.069088034331798553,
+                            "y": 0.06897880882024765
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 30,
+                        "locked": true,
+                        "name": "Streamer",
+                        "pos": {
+                            "x": 1560.0,
+                            "y": 613.0
+                        },
+                        "private_settings": {
+                            "collapsed": false
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "PrepareOverlay",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/Prepare.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "End",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/End.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Restart": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Logoshow",
+            "prev_ver": 402653187,
+            "private_settings": {
+                "mixer_hidden": true
+            },
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "hw_decode": false,
+                "local_file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/Logoshow.webm",
+                "looping": true
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_key_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 키",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "brightness": 0.77000000000000002,
+                        "contrast": 0.17000000000000001,
+                        "key_color": 4278190080,
+                        "key_color_type": "custom",
+                        "similarity": 100,
+                        "smoothness": 811
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                },
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "mask_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "To white",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "image_path": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/white.png",
+                        "type": "blend_add_filter.effect"
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                },
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "mask_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Color Mask",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "image_path": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/colormask.png",
+                        "type": "blend_mul_filter.effect"
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "window_capture",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Manager_Stars",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "priority": 1,
+                "window": " Tournament Manager:WindowsForms10.Window.2b.app.0.2bf8098_r11_ad1:osu!.exe"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_key_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 키",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "brightness": 0.77000000000000002,
+                        "contrast": 0.17000000000000001,
+                        "key_color": 4278190080,
+                        "key_color_type": "custom",
+                        "similarity": 100,
+                        "smoothness": 811
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "window_capture",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Manager_Nowplaying",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "priority": 1,
+                "window": " Tournament Manager:WindowsForms10.Window.2b.app.0.bb8560_r9_ad1:osu!.exe"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 보정",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "opacity": 30
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "ChatBGdim",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4278190080,
+                "height": 170,
+                "width": 960
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "IngameTitle",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "align": "center",
+                "color": 4278190080,
+                "extents": false,
+                "extents_cx": 600,
+                "extents_cy": 80,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/braket.txt",
+                "font": {
+                    "face": "Product Sans",
+                    "flags": 1,
+                    "size": 72,
+                    "style": "Bold"
+                },
+                "gradient": false,
+                "read_from_file": true,
+                "text": "Match A3",
+                "valign": "center"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "mask_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "3p",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "image_path": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/Clientmask/ClientMask_1200p_720p.png",
+                        "type": "mask_alpha_filter.effect"
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "monitor_capture",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Clients",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {},
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Title_Display",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4278190080,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/StreamTitle.txt",
+                "font": {
+                    "face": "Noto Sans CJK KR Bold",
+                    "flags": 1,
+                    "size": 100,
+                    "style": "Bold"
+                },
+                "read_from_file": true,
+                "text": "dfhdfh"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "NowPlaying_Display",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4278190080,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/SongTitle.txt",
+                "font": {
+                    "face": "Product Sans",
+                    "flags": 0,
+                    "size": 48,
+                    "style": "Regular"
+                },
+                "read_from_file": true,
+                "text": "sgsgdsgddsg"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Circles",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "fps": 60,
+                "fps_custom": false,
+                "height": 700,
+                "is_local_file": true,
+                "local_file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/Circles.html",
+                "shutdown": true,
+                "width": 1920
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "OFCTlogo",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/OFCTlogo.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 보정",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "gamma": 0.0,
+                        "opacity": 40,
+                        "saturation": 0.0
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Pulse",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 1500,
+                "is_local_file": true,
+                "local_file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/PreparePulse.html",
+                "reroute_audio": false,
+                "restart_when_active": true,
+                "shutdown": true,
+                "width": 1500
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_key_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 키",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "contrast": 0.0,
+                        "key_color": 4287532442,
+                        "key_color_type": "custom",
+                        "opacity": 100,
+                        "similarity": 71,
+                        "smoothness": 16
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                },
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "obs-stream-effects-filter-blur",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Blur",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "Filter.Blur.Angle": 0.0,
+                        "Filter.Blur.Size": 2.0,
+                        "Filter.Blur.StepScale": false,
+                        "Filter.Blur.SubType": "area",
+                        "Filter.Blur.Type": "dual_filtering",
+                        "Version": 30064836609
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "image_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "프사",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/GongliPsa.png"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_gdiplus",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "NowPlaying_End",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "align": "center",
+                "extents": true,
+                "extents_cx": 1800,
+                "extents_cy": 70,
+                "file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/SongTitle.txt",
+                "font": {
+                    "face": "Noto Sans CJK KR Bold",
+                    "flags": 1,
+                    "size": 72,
+                    "style": "Bold"
+                },
+                "read_from_file": true,
+                "valign": "center"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "IngameDisplayer",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "css": "",
+                "height": 170,
+                "is_local_file": true,
+                "local_file": "D:/Games/OFCT/Season2/202001_2/Streamkit/Sources/IngameDisplayer.html",
+                "restart_when_active": true,
+                "shutdown": true,
+                "width": 960
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_key_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 키",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "key_color": 4278190080,
+                        "key_color_type": "custom"
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "window_capture",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Manager_Chat",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "window": " Tournament Manager:WindowsForms10.Window.2b.app.0.bb8560_r9_ad1:osu!.exe"
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "색상 보정",
+                    "prev_ver": 402653187,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "opacity": 60
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Dim_Display",
+            "prev_ver": 402653187,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color": 4278190080,
+                "height": 300,
+                "width": 417
+            },
+            "sync": 0,
+            "volume": 1.0
+        }
+    ],
+    "transition_duration": 700,
+    "transitions": [
+        {
+            "id": "obs_stinger_transition",
+            "name": "OFCT 2-2 Transition",
+            "settings": {
+                "path": "D:/Games/OFCT/Season2/202001_2/Streamkit/Assets/Transition2-2.webm",
+                "tp_type": 1,
+                "transition_point": 240
+            }
+        }
+    ]
+}

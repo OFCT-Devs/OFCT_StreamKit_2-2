@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OFCT Circles</title>
+</head>
+<body>
+<style>
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .CircleDiv {
+        width: 700px;
+        height: 700px;
+        position: absolute;
+
+        /*border: 4px dashed #bcbcbc;*/
+
+        animation-name: spin;
+        /*animation-duration: 10s;*/
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+</style>
+<div style="width: 1920px; height: 1080px">
+    <div id="RedCircle1" class="CircleDiv" style="left:300px;"></div>
+    <div id="RedCircle2" class="CircleDiv" style="left:300px;"></div>
+    <div id="RedCircle3" class="CircleDiv" style="left:300px;"></div>
+    <div id="RedCircle4" class="CircleDiv" style="left:300px;"></div>
+    <div id="BlueCircle1" class="CircleDiv" style="right:300px;"></div>
+    <div id="BlueCircle2" class="CircleDiv" style="right:300px;"></div>
+    <div id="BlueCircle3" class="CircleDiv" style="right:300px;"></div>
+    <div id="BlueCircle4" class="CircleDiv" style="right:300px;"></div>
+</div>
+
+<script>
+    var circleSVG = new Array();
+    var svgCircle = new Array();
+
+    var Red = new Array("\#FFEBEE", "\#FFCDD2", "\#EF9A9A", "\#E57373", "\#EF5350", "\#F44336", "\#E53935", "\#D32F2F", "\#C62828", "\#B71C1C");
+    var Blue = new Array("\#E3F2FD", "\#BBDEFB", "\#90CAF9", "\#64B5F6", "\#42A5F5", "\#2196F3", "\#1E88E5", "\#1976D2", "\#1565C0", "\#0D47A1");
+
+    for (i = 0; i < 8; i++) {
+        circleSVG[i] = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        circleSVG[i].setAttribute("width", "700");
+        circleSVG[i].setAttribute("height", "700");
+
+        svgCircle[i] = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        svgCircle[i].setAttribute("cx", 350 + (Math.floor(Math.random() * 31) - 15));
+        svgCircle[i].setAttribute("cy", 350 + (Math.floor(Math.random() * 31) - 15));
+        svgCircle[i].setAttribute("r", 250 + (Math.random() * 31 - 15));
+        svgCircle[i].setAttribute("stroke-width", 3 + Math.random() * 3);
+        svgCircle[i].setAttribute("fill-opacity", 0);
+    }
+
+    for (i = 0; i < 4; i++) {
+        svgCircle[i].setAttribute("stroke", Red[Math.floor(Math.random() * 10)]);
+    }
+    for (i = 4; i < 8; i++) {
+        svgCircle[i].setAttribute("stroke", Blue[Math.floor(Math.random() * 10)]);
+    }
+
+    for (i = 0; i < 8; i++) {
+        circleSVG[i].appendChild(svgCircle[i]);
+    }
+
+    for (i = 0; i < 4; i++) {
+        document.getElementById("RedCircle" + (i + 1)).appendChild(circleSVG[i]);
+        document.getElementById("RedCircle" + (i + 1)).style.animationDuration = (5 + Math.random() * 20).toString()+"s";
+    }
+    for (i = 4; i < 8; i++) {
+        document.getElementById("BlueCircle" + (i - 3)).appendChild(circleSVG[i]);
+        document.getElementById("BlueCircle" + (i - 3)).style.animationDuration = (5 + Math.random() * 20).toString()+"s";
+    }
+</script>
+</svg>
+</body>
+</html>

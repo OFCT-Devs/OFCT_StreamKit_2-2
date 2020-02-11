@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OFCT Team info displayer</title>
+    <script src="papaparse.min.js"></script>
+    <!--<script src="textFit.js"></script>-->
+</head>
+
+<body>
+    <style>
+        body {
+            /*background-color: black;*/
+        }
+
+        .firstdiv>div {
+            float: left;
+        }
+
+        .firstdiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .TeamName {
+            display: flex;
+            font-family: "Noto Sans CJK KR", "나눔스퀘어라운드", sans-serif;
+            font-weight: 600;
+            font-size: 70px;
+            word-break: keep-all;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-shadow: 0px 0px 7px #000000;
+            width: 440px;
+            height: 440px;
+            padding: 30px;
+        }
+
+        .players {
+            display: flex;
+            font-family: "Exo 2 Regular", "나눔스퀘어라운드", sans-serif;
+            font-weight: 500;
+            font-size: 30px;
+            white-space: nowrap;
+            align-items: center;
+            color: #ffffff;
+            text-shadow: 0px 0px 7px #000000;
+            width: 300px;
+            height: 400px;
+            padding: 50px;
+        }
+    </style>
+    <div class="firstdiv">
+        <div id="RedTeamPlayers" class="players" style="text-align: right;-webkit-justify-content: flex-end; color: #D45176">
+            RedteamA<br>B<br>C<br>D<br>E<br>F<br>
+        </div>
+        <div id="RedTeamName" class="TeamName">Redteam</div>
+        <div style="height: 500px; width: 120px"></div>
+        <div id="BlueTeamName" class="TeamName">Blueteam</div>
+        <div id="BlueTeamPlayers" class="players" style="text-align: left;-webkit-justify-content: flex-start; color: #349CDE">
+            BlueteamA<br>B<br>C<br>D<br>E<br>F<br>
+        </div>
+    </div>
+
+
+    <script>
+        function readTextFile(file) {
+            var returnText = String();
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        returnText = allText;
+                    }
+                }
+            };
+            rawFile.send(null);
+            return returnText;
+        }
+
+        function getArrays(data, x, y, manual, count) {
+            var dataToReturn = new Array();
+            var i = 0;
+
+            if (manual) {
+                for (i = 0; i < count; i++) {
+                    content = data.data[y + i][x];
+                    dataToReturn[i] = content;
+                }
+                return dataToReturn;
+            } else {
+                while (true) {
+                    content = data.data[y + i][x];
+                    if (content === "" || content === undefined) {
+                        break;
+                    }
+                    dataToReturn[i] = content;
+                    i++;
+                }
+            }
+            return dataToReturn;
+        }
+
+        function update() {
+            redTeamName = readTextFile("../RedTeamName.txt").replace(/\r\n|\n|\r/gm, "");
+            blueTeamName = readTextFile("../BlueTeamName.txt").replace(/\r\n|\n|\r/gm, "");
+            csv = readTextFile("../PlayerList.csv");
+            playerList = Papa.parse(csv);
+
+            for (var i = 0; i < playerList.data.length; i++) {
+                for (var j = 0; j < playerList.data[i].length; j++) {
+                    playerList.data[i][j] = playerList.data[i][j].replace(/\r\n|\n|\r/gm, "");
+                }
+            }
+
+            console.log(playerList);
+
+            /*playerCount = playerList.data.length - 2;
+            teamCount = playerList.data[0].length - 1;*/
+
+            for (var i = 0; i < playerList.data.length; i++) {
+                if (redTeamName === playerList.data[0][i]) {
+                    players = getArrays(playerList, i, 1);
+                    textToWrite = "";
+                    for (j = 0; j < players.length; j++) {
+                        textToWrite += players[j] + "<br>";
+                    }
+                    document.getElementById("RedTeamPlayers").innerHTML = textToWrite;
+                }
+                if (blueTeamName === playerList.data[0][i]) {
+                    players = getArrays(playerList, i, 1);
+                    textToWrite = "";
+                    for (j = 0; j < players.length; j++) {
+                        textToWrite += players[j] + "<br>";
+                    }
+                    document.getElementById("BlueTeamPlayers").innerHTML = textToWrite;
+                }
+            }
+
+            document.getElementById("RedTeamName").innerHTML = redTeamName;
+            document.getElementById("BlueTeamName").innerHTML = blueTeamName;
+            //textFit(document.getElementById("timeleft")), {minFontSize: 10, maxFontSize: 300};
+        }
+
+        setInterval(update, 3000);
+        update();
+    </script>
+</body></html>

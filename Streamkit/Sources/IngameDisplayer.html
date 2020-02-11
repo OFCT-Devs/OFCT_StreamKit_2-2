@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="papaparse.min.js"></script>
+</head>
+
+<body id="body">
+    <style>
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            /*background: #2e3337;*/
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #Playing {
+            width: 960px;
+            height: 170px;
+        }
+
+        .scoreDiv {
+            display: flex;
+            flex-direction: row;
+            width: 960px;
+        }
+
+        .barDiv {
+            display: flex;
+            height: 100%;
+            width: 50%;
+        }
+
+        #redBar {
+            height: 100%;
+            background: #EF5350;
+            border-bottom-left-radius: 10px;
+        }
+
+        #blueBar {
+            height: 100%;
+            background: #42A5F5;
+            border-bottom-right-radius: 10px;
+        }
+
+        .score {
+            height: 100%;
+            width: 50%;
+            font-family: "Product Sans";
+            font-size: 70px;
+            text-align: center;
+        }
+
+        .MapInfoDiv {
+            display: flex;
+            flex-direction: row;
+            width: 960px;
+            height: 60px;
+        }
+
+        .MapInfoTag {
+            height: 100%;
+            width: 150px;
+            font-family: "Product Sans";
+            font-size: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .MapInfoContent {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 0px 15px 0px 15px;
+            height: 100%;
+        }
+
+        .MapInfoValue {
+            height: 100%;
+            font-family: "Product Sans";
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .MapInfoKeyword {
+            height: 100%;
+            font-family: "Product Sans";
+            font-size: 40px;
+            text-align: center;
+            line-height: 60px;
+            color: #4a4a4a;
+            margin-left: 10px;
+        }
+
+        #Chatting {
+            display: flex;
+            flex-direction: column;
+            width: 920x;
+            height: 130px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .ChatTable {
+            animation-name: chatTableIntro;
+            animation-timing-function: ease-out;
+            animation-duration: 700ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes chatTableIntro {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .Nick {
+            max-width: 250px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-family: "Product Sans";
+            font-size: 25px;
+            color: #FFEB3B;
+            vertical-align: top;
+            word-break: break-all;
+        }
+
+        .Chat {
+            /*font-family: "Product Sans", "Noto Sans CJK KR Regular";*/
+            font-family: "Noto Sans CJK KR Light";
+            color: white;
+            font-size: 25px;
+            line-height: 30px;
+            /*word-wrap: break-word;*/
+            word-break: break-all;
+            /*white-space: pre-line;*/
+            width: 100%;
+            /*width: 500px;*/
+            text-overflow: ellipsis;
+            word-break: break-all;
+        }
+    </style>
+
+
+    <div id="Playing">
+        <div class="scoreDiv" style="height: 10px">
+            <div class="barDiv" style="flex-direction: row-reverse;">
+                <div id="redBar" style="width: 0px"></div>
+            </div>
+            <div class="barDiv">
+                <!--<div id="blueBar" style="width: 300px"></div>-->
+                <div id="blueBar"></div>
+            </div>
+        </div>
+        <div class="scoreDiv" style="height: 70px">
+            <div id="redScore" class="score" style="color: #FFFFFF; font-weight: normal">0</div>
+            <div id="blueScore" class="score" style="color: #FFFFFF; font-weight: normal">0</div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div id="MapInfoRed" class="MapInfoDiv" style="background: url('./IngameMapBGred.png')">
+            <div style="width: 10px"></div>
+            <div class="MapInfoTag">NM1</div>
+            <div style="height: 100%; width: 790px">
+                <div class="MapInfoContent">
+                    <div class="MapInfoValue SR">1.0</div>
+                    <div class="MapInfoKeyword" style="margin-left: 0px">☆</div>
+                    <div class="MapInfoKeyword">AR</div>
+                    <div class="MapInfoValue AR">1.0</div>
+                    <div class="MapInfoKeyword">OD</div>
+                    <div class="MapInfoValue OD">1.0</div>
+                    <div class="MapInfoKeyword">CS</div>
+                    <div class="MapInfoValue CS">1.0</div>
+                    <div class="MapInfoKeyword">BPM</div>
+                    <div class="MapInfoValue BPM">1</div>
+                </div>
+            </div>
+        </div>
+        <div id="MapInfoBlue" class="MapInfoDiv" style="background: url('./IngameMapBGblue.png')">
+            <div style="width: 10px"></div>
+            <div style="height: 100%; width: 790px">
+                <div class="MapInfoContent">
+                    <div class="MapInfoValue SR">1.0</div>
+                    <div class="MapInfoKeyword" style="margin-left: 0px">☆</div>
+                    <div class="MapInfoKeyword">AR</div>
+                    <div class="MapInfoValue AR">1.0</div>
+                    <div class="MapInfoKeyword">OD</div>
+                    <div class="MapInfoValue OD">1.0</div>
+                    <div class="MapInfoKeyword">CS</div>
+                    <div class="MapInfoValue CS">1.0</div>
+                    <div class="MapInfoKeyword">BPM</div>
+                    <div class="MapInfoValue BPM">1</div>
+                </div>
+            </div>
+            <div class="MapInfoTag">NM9</div>
+        </div>
+    </div>
+
+    <div id="Chatting">
+        <!--<table class="ChatTable">
+            <tr>
+                <td class="Nick" style="color: #42A5F5">Nopekjk</td>
+                <td style="width: 10px"></td>
+                <td class="Chat">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</td>
+            </tr>
+        </table>
+        <table class="ChatTable">
+            <tr>
+                <td class="Nick">yhsphd</td>
+                <td style="width: 10px"></td>
+                <td class="Chat">いろはにほへど ちりぬるを わがよたれぞ つねならむ うゐのおくやま けふこえて あさきゆめみじ ゑひもせず</td>
+            </tr>
+        </table>
+        <table class="ChatTable">
+            <tr>
+                <td class="Nick" style="color: #AB47BC">WWWWWWWWWWWWOWO</td>
+                <td style="width: 10px"></td>
+                <td class="Chat">IngameDisplayer Chatting 테스트</td>
+            </tr>
+        </table>-->
+    </div>
+    <script>
+        var tourneyWebsocket;
+        var chatWebsocket;
+
+        var color_red = "#EF5350";
+        var color_blue = "#42A5F5";
+        var color_yellow = "#FFEB3B";
+        var color_bancho = "#AB47BC";
+
+        var tourneyState;
+        var chatLog = "";
+        var mapID;
+        var mapSetID;
+        var state;
+
+        var playerList;
+        var redTeamName;
+        var blueTeamName;
+
+        var osuAPIkey = "70da7e9652da3b201ca9e04231716b7e9acbe8b9";
+
+        var redScoreElement = document.getElementById("redScore");
+        var bluescoreElement = document.getElementById("blueScore");
+        var redScoreBarElement = document.getElementById("redBar");
+        var blueScoreBarElement = document.getElementById("blueBar");
+
+        var chattingBoxElement = document.getElementById("Chatting");
+
+        function readTextFile(file) {
+            var returnText = new String();
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        returnText = allText;
+                    }
+                }
+            };
+            rawFile.send(null);
+            return returnText;
+        }
+
+        function getArrays(data, x, y, manual, count) {
+            var dataToReturn = new Array();
+            var i = 0;
+
+            if (manual) {
+                for (i = 0; i < count; i++) {
+                    content = data.data[y + i][x];
+                    dataToReturn[i] = content;
+                }
+                return dataToReturn;
+            } else {
+                while (true) {
+                    content = data.data[y + i][x];
+                    if (content === "" || content === undefined) {
+                        break;
+                    }
+                    dataToReturn[i] = content;
+                    i++;
+                }
+            }
+            return dataToReturn;
+        }
+
+        function update() {
+            //console.log(tourneyState);
+            var gap = Math.abs(tourneyState["redScore"] - tourneyState["blueScore"]);
+            //console.log(gap);
+            if (tourneyState["redScore"] > tourneyState["blueScore"]) {
+                redScoreElement.style.color = color_red;
+                redScoreElement.style.fontWeight = "bold";
+
+                bluescoreElement.style.color = "white";
+                bluescoreElement.style.fontWeight = "normal";
+
+                redScoreBarElement.style.width = gap / 500000.0 * 480 + "px";
+                blueScoreBarElement.style.width = "0px";
+            } else if (tourneyState["redScore"] < tourneyState["blueScore"]) {
+                redScoreElement.style.color = "white";
+                redScoreElement.style.fontWeight = "normal";
+                bluescoreElement.style.color = color_blue;
+                bluescoreElement.style.fontWeight = "bold";
+                redScoreBarElement.style.width = "0px";
+                blueScoreBarElement.style.width = gap / 500000.0 * 480 + "px";
+            } else {
+                redScoreElement.style.color = "white";
+                redScoreElement.style.fontWeight = "normal";
+                bluescoreElement.style.color = "white";
+                bluescoreElement.style.fontWeight = "normal";
+                redScoreBarElement.style.width = "0px";
+                blueScoreBarElement.style.width = "0px";
+            }
+            redScoreElement.innerHTML = tourneyState["redScore"].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            bluescoreElement.innerHTML = tourneyState["blueScore"].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            if (mapID !== tourneyState["mapID"]) {
+                mapID = tourneyState["mapID"];
+                mapSetID = tourneyState["mapSetID"];
+                updateMap();
+            }
+            if (state !== tourneyState["state"]) {
+                state = tourneyState["state"];
+                if (state == "Playing") {
+                    showScores();
+                } else if (state == "Idle") {
+                    showChat();
+                }
+            }
+        }
+
+        async function updateMap() {
+            console.log("Map Update!!");
+            var data = [];
+            var mod = "";
+            var index = "";
+            await fetch('https://osu.ppy.sh/api/get_beatmaps?k=' + osuAPIkey + '&b=' + mapID).then(res => res.json())
+                .then((out) => {
+                    //console.log(out);
+                    data[0] = out[0].difficultyrating;
+                    data[1] = out[0].diff_approach;
+                    data[2] = out[0].diff_overall;
+                    data[3] = out[0].diff_size;
+                    data[4] = out[0].bpm;
+                }).catch(err => console.error(err));
+
+            if (data[0] != NaN) {
+                for (var i = 0; i < 2; i++) {
+                    document.getElementsByClassName("SR")[i].innerHTML = parseFloat(data[0]).toFixed(2);
+                    document.getElementsByClassName("AR")[i].innerHTML = parseFloat(data[1]).toFixed(1);
+                    document.getElementsByClassName("OD")[i].innerHTML = parseFloat(data[2]).toFixed(1);
+                    document.getElementsByClassName("CS")[i].innerHTML = parseFloat(data[3]).toFixed(1);
+                    document.getElementsByClassName("BPM")[i].innerHTML = parseFloat(data[4]).toFixed(0);
+                }
+            }
+            csv = readTextFile("../mapSetIDs.csv");
+            IDs = Papa.parse(csv);
+            var NM_IDs = getArrays(IDs, 0, 1);
+            var HD_IDs = getArrays(IDs, 0, 10);
+            var HR_IDs = getArrays(IDs, 0, 15);
+            var DT_IDs = getArrays(IDs, 0, 20);
+            var FM_IDs = getArrays(IDs, 0, 26);
+            var TB_IDs = getArrays(IDs, 0, 31);
+            getTag: while (true) {
+                for (var i = 0; i < NM_IDs.length; i++) {
+                    if (mapSetID == parseInt(NM_IDs[i])) {
+                        mod = "NM";
+                        index = i + 1;
+                        break getTag;
+                    }
+                }
+                for (var i = 0; i < HD_IDs.length; i++) {
+                    if (mapSetID == HD_IDs[i]) {
+                        mod = "HD";
+                        index = i + 1;
+                        break getTag;
+                    }
+                }
+                for (var i = 0; i < HR_IDs.length; i++) {
+                    if (mapSetID == HR_IDs[i]) {
+                        mod = "HR";
+                        index = i + 1;
+                        break getTag;
+                    }
+                }
+                for (var i = 0; i < DT_IDs.length; i++) {
+                    if (mapSetID == DT_IDs[i]) {
+                        mod = "DT";
+                        index = i + 1;
+                        break getTag;
+                    }
+                }
+                for (var i = 0; i < FM_IDs.length; i++) {
+                    if (mapSetID == FM_IDs[i]) {
+                        mod = "FM";
+                        index = i + 1;
+                        break getTag;
+                    }
+                }
+                for (var i = 0; i < TB_IDs.length; i++) {
+                    if (mapSetID == TB_IDs[i]) {
+                        mod = "TB";
+                        index = "";
+                        break getTag;
+                    }
+                }
+                break;
+            }
+            document.getElementsByClassName("MapInfoTag")[0].innerHTML = mod + index;
+            document.getElementsByClassName("MapInfoTag")[1].innerHTML = mod + index;
+            csv = readTextFile("../mapPick.csv");
+            pickStatus = Papa.parse(csv);
+            var NM_stat = getArrays(pickStatus, 1, 1, true, 7);
+            var HD_stat = getArrays(pickStatus, 3, 1, true, 3);
+            var HR_stat = getArrays(pickStatus, 5, 1, true, 3);
+            var DT_stat = getArrays(pickStatus, 3, 6, true, 4);
+            var FM_stat = getArrays(pickStatus, 5, 6, true, 3);
+            var TB_stat = getArrays(pickStatus, 1, 10, true, 1);
+            var stat = "r";
+            if (mod == "NM") stat = NM_stat[index - 1].substr(0, 1);
+            if (mod == "HD") stat = HD_stat[index - 1].substr(0, 1);
+            if (mod == "HR") stat = HR_stat[index - 1].substr(0, 1);
+            if (mod == "DT") stat = DT_stat[index - 1].substr(0, 1);
+            if (mod == "FM") stat = FM_stat[index - 1].substr(0, 1);
+            if (mod == "TB") stat = TB_stat[index - 1].substr(0, 1);
+            if (stat == "r") {
+                document.getElementById("MapInfoRed").style.display = "flex";
+                document.getElementById("MapInfoBlue").style.display = "none";
+            }
+            if (stat == "b") {
+                document.getElementById("MapInfoRed").style.display = "none";
+                document.getElementById("MapInfoBlue").style.display = "flex";
+            }
+        }
+
+        function scrollChatToBottom() {
+            var element = document.getElementById("Chatting");
+            element.scrollTop = element.scrollHeight;
+        }
+
+        function showScores() {
+            console.log("Show Scores");
+            document.getElementById("Playing").style.display = "block";
+            document.getElementById("Chatting").style.display = "none";
+        }
+
+        function showChat() {
+            console.log("Show Chat");
+            document.getElementById("Playing").style.display = "none";
+            document.getElementById("Chatting").style.display = "block";
+        }
+
+        function chatUpdate(newChat) {
+            console.log("chat Update!!");
+
+            if (newChat.startsWith("\n") || newChat.startsWith("\r")) {
+                newChat = newChat.replace(/\r?\n/, "");
+            }
+
+            chatLines = newChat.split(/\r?\n/);
+            if (!chatLines[chatLines.length - 1]) {
+                chatLines.pop();
+            }
+
+            console.log(chatLines);
+
+            redTeamName = readTextFile("../RedTeamName.txt").replace(/\r\n|\n|\r/gm, "");
+            blueTeamName = readTextFile("../BlueTeamName.txt").replace(/\r\n|\n|\r/gm, "");
+            csv = readTextFile("../PlayerList.csv");
+            playerList = Papa.parse(csv);
+
+            for (var i = 0; i < playerList.data.length; i++) {
+                for (var j = 0; j < playerList.data[i].length; j++) {
+                    playerList.data[i][j] = playerList.data[i][j].replace(/\r\n|\n|\r/gm, "");
+                }
+            }
+
+            for (var i = 0; i < chatLines.length; i++) {
+                nick = chatLines[i].split(": ")[0];
+                chat = chatLines[i].split(": ")[1];
+                //console.log(checkTeam(nick));
+                generateChatTable(nick, chat, checkTeam(nick));
+            }
+        }
+
+        function checkTeam(nick) {
+            if (nick === "BanchoBot") {
+                return color_bancho;
+            }
+            for (var i = 0; i < playerList.data.length; i++) {
+                for (var j = 0; j < playerList.data[i].length; j++) {
+                    //console.log(playerList.data[i][j]);
+                    if (playerList.data[i][j] === nick) {
+                        console.log("found player " + nick);
+                        console.log(redTeamName + " vs. " + blueTeamName);
+                        console.log(playerList.data[0][j]);
+                        if (playerList.data[0][j] === redTeamName) {
+                            return color_red;
+                        }
+                        if (playerList.data[0][j] === blueTeamName) {
+                            return color_blue;
+                        }
+                    }
+                }
+            }
+            return color_yellow;
+        }
+
+        function generateChatTable(nick, chat, col) {
+            table = document.createElement("TABLE");
+            tr = document.createElement("TR");
+            td1 = document.createElement("TD");
+            td2 = document.createElement("TD");
+            td3 = document.createElement("TD");
+
+            table.classList.add("ChatTable");
+
+            td1.classList.add("Nick");
+            td1.innerHTML = nick;
+            td1.style.color = col;
+
+            //td2.classList.add("AnimationTd");
+            td2.style.width = "10px";
+
+            td3.classList.add("Chat");
+            td3.innerHTML = chat;
+
+            chattingBoxElement.appendChild(table);
+            table.appendChild(tr);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+
+            scrollChatToBottom();
+        }
+
+        function connect() {
+            tourneyWebsocket = null;
+            chatWebsocket = null;
+
+            tourneyWebsocket = new WebSocket("ws://127.0.0.1/tourneyState/");
+            chatWebsocket = new WebSocket("ws://127.0.0.1/chat/");
+
+            tourneyWebsocket.onopen = function(evt) {
+                console.log("tourneyWebsocket Connected");
+            };
+            chatWebsocket.onopen = function(evt) {
+                console.log("chatWebsocket Connected");
+            };
+
+            tourneyWebsocket.onmessage = function(evt) {
+                tourneyState = JSON.parse(evt.data);
+                //console.log(tourneyState);
+            };
+            chatWebsocket.onmessage = function(evt) {
+                newChat = evt.data.replace(chatLog, "");
+                chatLog = evt.data;
+                if (newChat) {
+                    chatUpdate(newChat);
+                }
+            };
+
+            tourneyWebsocket.onclose = function(evt) {
+                tourneyWebsocket = null;
+                setTimeout(function() {
+                    connect();
+                }, 100);
+            };
+            chatWebsocket.onclose = function(evt) {
+                chatWebsocket = null;
+                setTimeout(function() {
+                    connect();
+                }, 100);
+            };
+            /*websocket.close = function(err) {
+                setTimeout(function() {
+                    websocket.close();
+                    websocket = null;
+                    connect();
+                }, 3000);
+            }*/
+        }
+        connect();
+        setInterval(update, 100);
+        setInterval(updateMap, 5000);
+    </script>
+</body></html>

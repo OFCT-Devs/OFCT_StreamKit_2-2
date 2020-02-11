@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            background: #000000;
+        }
+
+        .Main {
+            /*background: #000000;*/
+            width: 1500px;
+            height: 1500px;
+        }
+
+        .pulse {
+            display: block;
+            width: 1000px;
+            height: 1000px;
+            position: absolute;
+            left: 250px;
+            top: 250px;
+            border-radius: 50%;
+            background: rgba(144, 85, 162, 1);
+            box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+            animation-name: pulse;
+            animation-timing-function: ease-out;
+            animation-duration: 700ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(144, 85, 162, 1);
+            }
+            100% {
+                box-shadow: 0 0 0 200px rgba(144, 85, 162, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+<!--<input type="button" value="Generate Pulse" onclick="generatePulse()">
+<input type="button" value="Generate Big Pulse" onclick="generateBigPulse()">-->
+<div class="Main" id="Main">
+    <div class="pulse"></div>
+</div>
+<script>
+    var pulseCount = 0;
+    var interval = 0;
+    var time = 0;
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function onMessage(evt) {
+        //console.log(evt.data);
+        if (evt.data === "pulse") {
+            interval = performance.now() - time;
+            //console.log("BPM " + parseInt(60000.0 / interval));
+            time = performance.now();
+            generatePulse();
+        }
+    }
+
+    function generatePulse() {
+        var pulseDiv = document.createElement("DIV");
+        pulseDiv.className = "pulse";
+        pulseDiv.id = "pulse" + pulseCount;
+        document.getElementById("Main").appendChild(pulseDiv);
+        setTimeout(removeElement, 2000, "pulse" + pulseCount);
+        //console.log("Pulse Count " + pulseCount);
+        pulseCount += 1;
+    }
+
+    function removeElement(elementId) {
+        // Removes an element from the document
+        var element = document.getElementById(elementId);
+        element.parentNode.removeChild(element);
+        element = null;
+    }
+
+    function connect() {
+        websocket = new WebSocket("ws://127.0.0.1/pulse/");
+        websocket.onmessage = function (evt) {
+            onMessage(evt)
+        };
+        /*websocket.onclose = function(evt) {
+            setTimeout(function () {
+                connect();
+            }, 1000);
+        };*/
+        /*websocket.close = function (err) {
+            setTimeout(function () {
+                websocket.close();
+                websocket = null;
+                connect();
+            }, 3000);
+        }*/
+    }
+
+    connect();
+
+</script>
+</body>
+</html>

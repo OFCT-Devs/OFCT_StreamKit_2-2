@@ -1,0 +1,15 @@
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\StreamInfoProvider.exe.config
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\StreamInfoProvider.exe
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\StreamInfoProvider.pdb
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\obj\Debug\StreamInfoProvider.csprojAssemblyReference.cache
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\obj\Debug\StreamInfoProvider.Form1.resources
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\obj\Debug\StreamInfoProvider.Properties.Resources.resources
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\obj\Debug\StreamInfoProvider.csproj.GenerateResource.cache
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\obj\Debug\StreamInfoProvider.exe
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\obj\Debug\StreamInfoProvider.pdb
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\OsuMemoryDataProvider.dll
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\ProcessMemoryDataFinder.dll
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\obj\Debug\StreamInfoProvider.csproj.CopyComplete
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\websocket-sharp.dll
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\Newtonsoft.Json.dll
+D:\Games\OFCT\Projects\StreamInfoProvider\StreamInfoProvider\bin\Debug\Newtonsoft.Json.xml
