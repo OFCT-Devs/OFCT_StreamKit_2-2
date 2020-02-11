@@ -149,6 +149,7 @@
             text-overflow: ellipsis;
             word-break: break-all;
         }
+
     </style>
 
 
@@ -331,11 +332,16 @@
                 updateMap();
             }
             if (state !== tourneyState["state"]) {
-                state = tourneyState["state"];
                 if (state == "Playing") {
+                    state = tourneyState["state"];
                     showScores();
                 } else if (state == "Idle") {
+                    state = tourneyState["state"];
                     showChat();
+                } else if (state == "Ranking") {
+                    if (tourneyState["redScore"] == 0 && tourneyState["blueScore"] == 0) {
+                        showChat();
+                    }
                 }
             }
         }
@@ -594,5 +600,8 @@
         connect();
         setInterval(update, 100);
         setInterval(updateMap, 5000);
+
     </script>
-</body></html>
+</body>
+
+</html>
