@@ -40,10 +40,12 @@
 			this.osuRunningLabel = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.Offset = new System.Windows.Forms.NumericUpDown();
-			this.WebSocketLabel = new System.Windows.Forms.Label();
+			this.TourneyStateLabel = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.BPM = new System.Windows.Forms.Label();
 			this.BPMcircle = new System.Windows.Forms.Label();
+			this.PulseLabel = new System.Windows.Forms.Label();
+			this.ChatLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.ReadingDelay)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Offset)).BeginInit();
 			this.SuspendLayout();
@@ -169,16 +171,16 @@
 			this.Offset.Size = new System.Drawing.Size(55, 21);
 			this.Offset.TabIndex = 11;
 			// 
-			// WebSocketLabel
+			// TourneyStateLabel
 			// 
-			this.WebSocketLabel.AutoSize = true;
-			this.WebSocketLabel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.WebSocketLabel.ForeColor = System.Drawing.Color.Red;
-			this.WebSocketLabel.Location = new System.Drawing.Point(41, 194);
-			this.WebSocketLabel.Name = "WebSocketLabel";
-			this.WebSocketLabel.Size = new System.Drawing.Size(191, 15);
-			this.WebSocketLabel.TabIndex = 12;
-			this.WebSocketLabel.Text = "WebSocket Client Not Connected.";
+			this.TourneyStateLabel.AutoSize = true;
+			this.TourneyStateLabel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.TourneyStateLabel.ForeColor = System.Drawing.Color.Red;
+			this.TourneyStateLabel.Location = new System.Drawing.Point(82, 198);
+			this.TourneyStateLabel.Name = "TourneyStateLabel";
+			this.TourneyStateLabel.Size = new System.Drawing.Size(77, 15);
+			this.TourneyStateLabel.TabIndex = 12;
+			this.TourneyStateLabel.Text = "TourneyState";
 			// 
 			// label6
 			// 
@@ -211,15 +213,39 @@
 			this.BPMcircle.TabIndex = 15;
 			this.BPMcircle.Text = "🔴";
 			// 
+			// PulseLabel
+			// 
+			this.PulseLabel.AutoSize = true;
+			this.PulseLabel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.PulseLabel.ForeColor = System.Drawing.Color.Red;
+			this.PulseLabel.Location = new System.Drawing.Point(41, 198);
+			this.PulseLabel.Name = "PulseLabel";
+			this.PulseLabel.Size = new System.Drawing.Size(35, 15);
+			this.PulseLabel.TabIndex = 16;
+			this.PulseLabel.Text = "Pulse";
+			// 
+			// ChatLabel
+			// 
+			this.ChatLabel.AutoSize = true;
+			this.ChatLabel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.ChatLabel.ForeColor = System.Drawing.Color.Red;
+			this.ChatLabel.Location = new System.Drawing.Point(165, 198);
+			this.ChatLabel.Name = "ChatLabel";
+			this.ChatLabel.Size = new System.Drawing.Size(32, 15);
+			this.ChatLabel.TabIndex = 17;
+			this.ChatLabel.Text = "Chat";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(478, 271);
+			this.Controls.Add(this.ChatLabel);
+			this.Controls.Add(this.PulseLabel);
 			this.Controls.Add(this.BPMcircle);
 			this.Controls.Add(this.BPM);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.WebSocketLabel);
+			this.Controls.Add(this.TourneyStateLabel);
 			this.Controls.Add(this.Offset);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.osuRunningLabel);
@@ -260,10 +286,12 @@
         private System.Windows.Forms.Label osuRunningLabel;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.NumericUpDown Offset;
-		private System.Windows.Forms.Label WebSocketLabel;
+		private System.Windows.Forms.Label TourneyStateLabel;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label BPM;
 		private System.Windows.Forms.Label BPMcircle;
+		private System.Windows.Forms.Label PulseLabel;
+		private System.Windows.Forms.Label ChatLabel;
 	}
 }
 

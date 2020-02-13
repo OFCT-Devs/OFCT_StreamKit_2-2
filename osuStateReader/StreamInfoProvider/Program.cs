@@ -9,31 +9,67 @@ namespace osuStateReader
 {
 	public class pulse : WebSocketBehavior
 	{
-		int connectedClients = 0;
+		int count = 0;
 		protected override void OnOpen()
 		{
 			base.OnOpen();
-			Form1.F1.WebSocketConnected();
-			connectedClients++;
+			count++;
+			Form1.F1.WebSocketConnected(0);
 		}
 
 		protected override void OnClose(CloseEventArgs e)
 		{
 			base.OnClose(e);
-			if (connectedClients == 0)
+			count--;
+			if (count == 0)
 			{
-				Form1.F1.WebSocketDisConnected();
+				Form1.F1.WebSocketDisconnected(0);
 			}
 		}
 	}
 
 	public class tourenyState : WebSocketBehavior
 	{
+		int count = 0;
 		protected override void OnOpen()
 		{
 			base.OnOpen();
+			count++;
+			Form1.F1.WebSocketConnected(1);
+		}
+
+		protected override void OnClose(CloseEventArgs e)
+		{
+			base.OnClose(e);
+			count--;
+			if (count == 0)
+			{
+				Form1.F1.WebSocketDisconnected(1);
+			}
 		}
 	}
+
+	public class chat : WebSocketBehavior
+	{
+		int count = 0;
+		protected override void OnOpen()
+		{
+			base.OnOpen();
+			count++;
+			Form1.F1.WebSocketConnected(2);
+		}
+
+		protected override void OnClose(CloseEventArgs e)
+		{
+			base.OnClose(e);
+			count--;
+			if (count == 0)
+			{
+				Form1.F1.WebSocketDisconnected(2);
+			}
+		}
+	}
+
 	static class Program
 	{
 		/// <summary>
@@ -45,19 +81,6 @@ namespace osuStateReader
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1(args.FirstOrDefault()));
-		}
-	}
-
-	public class chat : WebSocketBehavior
-	{
-		protected override void OnOpen()
-		{
-			base.OnOpen();
-		}
-
-		protected override void OnClose(CloseEventArgs e)
-		{
-			base.OnClose(e);
 		}
 	}
 }

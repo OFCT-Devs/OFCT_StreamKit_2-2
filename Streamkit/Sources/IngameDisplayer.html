@@ -14,7 +14,7 @@
         }
 
         body {
-            /*background: #2e3337;*/
+            background: #2e3337;
             padding: 0px;
             margin: 0px;
         }
@@ -149,7 +149,6 @@
             text-overflow: ellipsis;
             word-break: break-all;
         }
-
     </style>
 
 
@@ -203,6 +202,22 @@
                 </div>
             </div>
             <div class="MapInfoTag">NM9</div>
+        </div>
+        <div id="MapInfo" class="MapInfoDiv" style="background: url('./IngameMapBG.png')">
+            <div style="height: 100%; width: 800px; padding-right: 80px; padding-left: 80px">
+                <div class="MapInfoContent">
+                    <div class="MapInfoValue SR">1.0</div>
+                    <div class="MapInfoKeyword" style="margin-left: 0px">☆</div>
+                    <div class="MapInfoKeyword">AR</div>
+                    <div class="MapInfoValue AR">1.0</div>
+                    <div class="MapInfoKeyword">OD</div>
+                    <div class="MapInfoValue OD">1.0</div>
+                    <div class="MapInfoKeyword">CS</div>
+                    <div class="MapInfoValue CS">1.0</div>
+                    <div class="MapInfoKeyword">BPM</div>
+                    <div class="MapInfoValue BPM">1</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -297,7 +312,6 @@
         }
 
         function update() {
-            //console.log(tourneyState);
             var gap = Math.abs(tourneyState["redScore"] - tourneyState["blueScore"]);
             //console.log(gap);
             if (tourneyState["redScore"] > tourneyState["blueScore"]) {
@@ -351,25 +365,11 @@
             var data = [];
             var mod = "";
             var index = "";
-            await fetch('https://osu.ppy.sh/api/get_beatmaps?k=' + osuAPIkey + '&b=' + mapID).then(res => res.json())
-                .then((out) => {
-                    //console.log(out);
-                    data[0] = out[0].difficultyrating;
-                    data[1] = out[0].diff_approach;
-                    data[2] = out[0].diff_overall;
-                    data[3] = out[0].diff_size;
-                    data[4] = out[0].bpm;
-                }).catch(err => console.error(err));
+            var notMappool = false;
 
-            if (data[0] != NaN) {
-                for (var i = 0; i < 2; i++) {
-                    document.getElementsByClassName("SR")[i].innerHTML = parseFloat(data[0]).toFixed(2);
-                    document.getElementsByClassName("AR")[i].innerHTML = parseFloat(data[1]).toFixed(1);
-                    document.getElementsByClassName("OD")[i].innerHTML = parseFloat(data[2]).toFixed(1);
-                    document.getElementsByClassName("CS")[i].innerHTML = parseFloat(data[3]).toFixed(1);
-                    document.getElementsByClassName("BPM")[i].innerHTML = parseFloat(data[4]).toFixed(0);
-                }
-            }
+            var modString = "";
+
+
             csv = readTextFile("../mapSetIDs.csv");
             IDs = Papa.parse(csv);
             var NM_IDs = getArrays(IDs, 0, 1);
@@ -378,6 +378,7 @@
             var DT_IDs = getArrays(IDs, 0, 20);
             var FM_IDs = getArrays(IDs, 0, 26);
             var TB_IDs = getArrays(IDs, 0, 31);
+
             getTag: while (true) {
                 for (var i = 0; i < NM_IDs.length; i++) {
                     if (mapSetID == parseInt(NM_IDs[i])) {
@@ -397,6 +398,7 @@
                     if (mapSetID == HR_IDs[i]) {
                         mod = "HR";
                         index = i + 1;
+                        modString = "&mods=16";
                         break getTag;
                     }
                 }
@@ -404,6 +406,7 @@
                     if (mapSetID == DT_IDs[i]) {
                         mod = "DT";
                         index = i + 1;
+                        modString = "&mods=64";
                         break getTag;
                     }
                 }
@@ -421,32 +424,94 @@
                         break getTag;
                     }
                 }
+                notMappool = true;
                 break;
             }
+
+            await fetch('https://osu.ppy.sh/api/get_beatmaps?k=' + osuAPIkey + '&b=' + mapID + modString).then(res => res.json())
+                .then((out) => {
+                    //console.log(out);
+                    data[0] = out[0].difficultyrating;
+                    data[1] = out[0].diff_approach;
+                    data[2] = out[0].diff_overall;
+                    data[3] = out[0].diff_size;
+                    data[4] = out[0].bpm;
+                }).catch(err => console.error(err));
+
+            if (notMappool == false) {
+                if (mod == "HR") {
+                    data[1] = data[1] * 1.4;
+                    data[2] = data[2] * 1.4;
+                    data[3] = data[3] * 1.3;
+                    for (var i = 1; i <= 3; i++) {
+                        if (data[i] >= 10) {
+                            data[i] = 10;
+                        }
+                    }
+                }
+                if (mod == "DT") {
+                    var timing = 0;
+                    if (data[1] >= 5) {
+                        timing = 1200 - ((data[1] - 5.0) * 150);
+                        timing = timing * 2.0 / 3 + 0.33;
+                        data[1] = (1950 - timing) / 150.0;
+                    } else if (data[1] < 5) {
+                        timing = 1800 - (data[1] * 120.0);
+                        timing = timing * 2.0 / 3 + 0.33;
+                        data[1] = (1800 - timing) / 120.0;
+                    }
+                    data[2] = (data[2] * 8 + 53) / 12.0;
+                }
+            }
+
+            data[0] = Math.floor(data[0] * 100) / 100;
+            data[1] = Math.floor(data[1] * 10) / 10;
+            data[2] = Math.floor(data[2] * 10) / 10;
+            data[3] = Math.floor(data[3] * 10) / 10;
+
+            if (data[0] != NaN) {
+                for (var i = 0; i < 3; i++) {
+                    document.getElementsByClassName("SR")[i].innerHTML = parseFloat(data[0]).toFixed(2);
+                    document.getElementsByClassName("AR")[i].innerHTML = parseFloat(data[1]).toFixed(1);
+                    document.getElementsByClassName("OD")[i].innerHTML = parseFloat(data[2]).toFixed(1);
+                    document.getElementsByClassName("CS")[i].innerHTML = parseFloat(data[3]).toFixed(1);
+                    document.getElementsByClassName("BPM")[i].innerHTML = parseFloat(data[4]).toFixed(0);
+                }
+            }
+
             document.getElementsByClassName("MapInfoTag")[0].innerHTML = mod + index;
             document.getElementsByClassName("MapInfoTag")[1].innerHTML = mod + index;
+
             csv = readTextFile("../mapPick.csv");
             pickStatus = Papa.parse(csv);
+
             var NM_stat = getArrays(pickStatus, 1, 1, true, 7);
             var HD_stat = getArrays(pickStatus, 3, 1, true, 3);
             var HR_stat = getArrays(pickStatus, 5, 1, true, 3);
             var DT_stat = getArrays(pickStatus, 3, 6, true, 4);
             var FM_stat = getArrays(pickStatus, 5, 6, true, 3);
             var TB_stat = getArrays(pickStatus, 1, 10, true, 1);
-            var stat = "r";
+
+            var stat = "";
             if (mod == "NM") stat = NM_stat[index - 1].substr(0, 1);
             if (mod == "HD") stat = HD_stat[index - 1].substr(0, 1);
             if (mod == "HR") stat = HR_stat[index - 1].substr(0, 1);
             if (mod == "DT") stat = DT_stat[index - 1].substr(0, 1);
             if (mod == "FM") stat = FM_stat[index - 1].substr(0, 1);
             if (mod == "TB") stat = TB_stat[index - 1].substr(0, 1);
+
             if (stat == "r") {
                 document.getElementById("MapInfoRed").style.display = "flex";
                 document.getElementById("MapInfoBlue").style.display = "none";
-            }
-            if (stat == "b") {
+                document.getElementById("MapInfo").style.display = "none";
+            } else if (stat == "b") {
                 document.getElementById("MapInfoRed").style.display = "none";
                 document.getElementById("MapInfoBlue").style.display = "flex";
+                document.getElementById("MapInfo").style.display = "none";
+            } else {
+                document.getElementById("MapInfoRed").style.display = "none";
+                document.getElementById("MapInfoBlue").style.display = "none";
+                document.getElementById("MapInfo").style.display = "flex";
             }
         }
 
@@ -459,6 +524,7 @@
             console.log("Show Scores");
             document.getElementById("Playing").style.display = "block";
             document.getElementById("Chatting").style.display = "none";
+            updateMap();
         }
 
         function showChat() {
@@ -552,23 +618,33 @@
             scrollChatToBottom();
         }
 
-        function connect() {
-            tourneyWebsocket = null;
-            chatWebsocket = null;
 
+        async function connentTourneyWS() {
+            tourneyWebsocket = null;
             tourneyWebsocket = new WebSocket("ws://127.0.0.1/tourneyState/");
-            chatWebsocket = new WebSocket("ws://127.0.0.1/chat/");
 
             tourneyWebsocket.onopen = function(evt) {
                 console.log("tourneyWebsocket Connected");
             };
-            chatWebsocket.onopen = function(evt) {
-                console.log("chatWebsocket Connected");
-            };
-
             tourneyWebsocket.onmessage = function(evt) {
                 tourneyState = JSON.parse(evt.data);
+
                 //console.log(tourneyState);
+            };
+            tourneyWebsocket.onclose = function(evt) {
+                tourneyWebsocket = null;
+                setTimeout(function() {
+                    connentTourneyWS();
+                }, 100);
+            };
+        }
+
+        async function connectChatWS() {
+            chatWebsocket = null;
+            chatWebsocket = new WebSocket("ws://127.0.0.1/chat/");
+
+            chatWebsocket.onopen = function(evt) {
+                console.log("chatWebsocket Connected");
             };
             chatWebsocket.onmessage = function(evt) {
                 newChat = evt.data.replace(chatLog, "");
@@ -577,32 +653,18 @@
                     chatUpdate(newChat);
                 }
             };
-
-            tourneyWebsocket.onclose = function(evt) {
-                tourneyWebsocket = null;
-                setTimeout(function() {
-                    connect();
-                }, 100);
-            };
             chatWebsocket.onclose = function(evt) {
                 chatWebsocket = null;
                 setTimeout(function() {
-                    connect();
+                    connectChatWS();
                 }, 100);
             };
-            /*websocket.close = function(err) {
-                setTimeout(function() {
-                    websocket.close();
-                    websocket = null;
-                    connect();
-                }, 3000);
-            }*/
         }
-        connect();
+
+
+        connentTourneyWS();
+        connectChatWS();
+
         setInterval(update, 100);
-        setInterval(updateMap, 5000);
-
     </script>
-</body>
-
-</html>
+</body></html>

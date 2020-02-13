@@ -47,6 +47,7 @@ namespace osuStateReader
 		readonly String configFileLocation = @"../osuStateReaderConfig.cfg";
 
 		WebSocketServer ws = new WebSocketServer("ws://127.0.0.1");
+		List<Label> wsLabels = new List<Label>();
 
 		public static Form1 F1;
 
@@ -58,6 +59,10 @@ namespace osuStateReader
 			Closing += OnClosing;
 			ReadingDelay.ValueChanged += DelaySettingChange;
 			Offset.ValueChanged += OffsetSettingChange;
+
+			wsLabels.Add(PulseLabel);
+			wsLabels.Add(TourneyStateLabel);
+			wsLabels.Add(ChatLabel);
 
 			F1 = this;
 
@@ -253,20 +258,18 @@ namespace osuStateReader
 				watcher.EnableRaisingEvents = true;
 			}			
 		}
-		public void WebSocketConnected()
+		public void WebSocketConnected(int client)
 		{
 			Invoke(new Action(() =>
 			{
-				WebSocketLabel.Text = "WebSocket Client Connected.";
-				WebSocketLabel.ForeColor = System.Drawing.Color.Green;
+				wsLabels[client].ForeColor = System.Drawing.Color.Green;
 			}));
 		}
-		public void WebSocketDisConnected()
+		public void WebSocketDisconnected(int client)
 		{
 			Invoke(new Action(() =>
 			{
-				WebSocketLabel.Text = "WebSocket Client Not Connected.";
-				WebSocketLabel.ForeColor = System.Drawing.Color.Red;
+				wsLabels[client].ForeColor = System.Drawing.Color.Red;
 			}));
 		}
 
@@ -486,6 +489,7 @@ namespace osuStateReader
 				}
 			}
 		}
+
 		int GetAudioDuration(string filePath)
 		{
 			try
