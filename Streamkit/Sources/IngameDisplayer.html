@@ -14,7 +14,7 @@
         }
 
         body {
-            background: #2e3337;
+            /*background: #2e3337;*/
             padding: 0px;
             margin: 0px;
         }
@@ -149,6 +149,7 @@
             text-overflow: ellipsis;
             word-break: break-all;
         }
+
     </style>
 
 
@@ -345,7 +346,18 @@
                 mapSetID = tourneyState["mapSetID"];
                 updateMap();
             }
-            if (state !== tourneyState["state"]) {
+
+            if (tourneyState["state"] == "Playing") {
+                showScores();
+            } else if (tourneyState["state"] == "Idle") {
+                showChat();
+            } else if (tourneyState["state"] == "Ranking") {
+                if (tourneyState["redScore"] == 0 && tourneyState["blueScore"] == 0) {
+                    showChat();
+                }
+            }
+
+            /*if (state !== tourneyState["state"]) {
                 if (state == "Playing") {
                     state = tourneyState["state"];
                     showScores();
@@ -357,7 +369,7 @@
                         showChat();
                     }
                 }
-            }
+            }*/
         }
 
         async function updateMap() {
@@ -461,6 +473,7 @@
                         data[1] = (1800 - timing) / 120.0;
                     }
                     data[2] = (data[2] * 8 + 53) / 12.0;
+                    data[4] = data[4] * 1.5;
                 }
             }
 
@@ -666,5 +679,8 @@
         connectChatWS();
 
         setInterval(update, 100);
+
     </script>
-</body></html>
+</body>
+
+</html>
